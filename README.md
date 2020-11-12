@@ -4,9 +4,9 @@
 This README will take you through the steps required before the workshop. 
 
 There are three things that everyone needs to do BEFORE the workshop. If you have trouble with any of these steps,
-please reach out to the tutorial organizers. If you've been assigned the role of Group Leader, you have an additional
+please reach out to the workshop organizers. If you've been assigned the role of Group Leader, you have an additional
 step to complete BEFORE the workshop: Create one GitHub repository for your group via 
-[these instructions](https://github.com/alcantarar/ASB_Tutorial/wiki/Group-Leader-Instructions).**
+[these instructions](https://github.com/alcantarar/UWM_GitHub_Workshop/wiki/Group-Leader-Instructions).**
 
 ## 1. Creating a GitHub Account
 This should be fairly self explanatory. Go the the GitHub [website](https://github.com/), and create a new account.
@@ -16,7 +16,7 @@ This should be fairly self explanatory. Go the the GitHub [website](https://gith
 This [website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) has more detailed install instructions for all 3 operating systems.
 
 The workshop will focus on using Git Bash with GitHub, but there are [desktop applications](https://git-scm.com/downloads/guis) 
-that you may be interested in using after the tutorial. These desktop applications will not be used in the tutorial.
+that you may be interested in using after the workshop. These desktop applications will not be used in the workshop.
 
 #### Windows
 To download Git and use the Bash application, go to [this website](https://git-scm.com/download/win) and click the link associated with your version of Windows.
@@ -52,7 +52,7 @@ $ git config --global user.name "FIRSTNAME LASTNAME"
 $ git config --global user.email "EMAIL-ASSOCIATED-WITH-GITHUB-ACCOUNT"
 ```
 ## 3. Installing MATLAB/Python/R
-We setup this tutorial to be used with MATLAB, Python, and R.
+We setup this workshop to be used with MATLAB, Python, and R.
 While Python and R are both free to use and download, MATLAB will require a license. Most universities provide students licenses.
 
 ### MATLAB
