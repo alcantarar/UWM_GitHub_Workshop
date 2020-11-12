@@ -1,22 +1,15 @@
-# ASB 2020 GitHub tutorial setup
-#### Contributors:
-* [Ryan Alcantara](https://twitter.com/Ryan_Alcantara_)
-* [Gary Bruening](https://github.com/GBruening)
-* [Ross Wilkinson](https://twitter.com/rd_wilkinson)
-* [Steve Kasica](https://github.com/swkasica)
+# GitHub Workshop for University of Wisconsin-Milwaukee
 
-This will be the repository that we will use for the Git Tutorial for [ASB 2020](https://asb2020.gatech.edu/)!
+# Pre-Workshop Setup
+This section is intended to take you through the steps required before the workshop. 
 
-# Pre-Meeting Setup
-This section is intended to take you through the steps required before the meeting. 
-
-There are three things that everyone needs to do BEFORE the tutorial. **If you have trouble with any of these steps,
+There are three things that everyone needs to do BEFORE the workshop. **If you have trouble with any of these steps,
 please reach out to the tutorial organizers.**
 1. First you need to create a [Github](https://github.com/) account. Follow the instructions on their page to setup your account.
 2. The first program everyone will need is some version of Git. Git is the version control software that allows you to see, track, and edit changes to code bases. 
 3. The second program is either [MATLAB](https://www.mathworks.com/), [Python](https://www.python.org/), or [R](https://www.r-project.org/about.html). We will be using these to run example scripts.
 
-**Group Leaders have an additional step to complete BEFORE the tutorial:**
+**Group Leaders have an additional step to complete BEFORE the workshop. Only do this if you've been assigned the role of Group Leader:**
 - Create one GitHub repository for your group via [these instructions](https://github.com/alcantarar/ASB_Tutorial/wiki/Group-Leader-Instructions).
 
 ## 1. Creating a GitHub Account
@@ -26,14 +19,14 @@ This should be fairly self explanatory. Go the the GitHub [website](https://gith
 ### A. Installation
 This [website](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) has more detailed install instructions for all 3 operating systems.
 
-The tutorial will focus on using Git Bash with GitHub, but there are [desktop applications](https://git-scm.com/downloads/guis) 
+The workshop will focus on using Git Bash with GitHub, but there are [desktop applications](https://git-scm.com/downloads/guis) 
 that you may be interested in using after the tutorial. These desktop applications will not be used in the tutorial.
 
 #### Windows
 To download Git and use the Bash application, go to [this website](https://git-scm.com/download/win) and click the link associated with your version of Windows.
 
 *Note: There are many configuration options available during the setup wizard. The recommended settings will suffice for 
-this tutorial.*
+this workshop.*
 
 #### Mac
 With Mac (10.9 and above), you can install Git directly by running the command in terminal (without the `$`):
@@ -78,3 +71,11 @@ To download the full Anaconda distribution, go [here](https://www.anaconda.com/p
 
 ### R
 We will be R using version 3.6, and highly recommend following this tutorial with R in [RStudio](https://rstudio.com/).
+
+# Contributors:
+* [Ryan Alcantara](https://twitter.com/Ryan_Alcantara_)
+* [Gary Bruening](https://github.com/GBruening)
+* [Ross Wilkinson](https://twitter.com/rd_wilkinson)
+* [Steve Kasica](https://github.com/swkasica)
+
+This repository is a modified version of the one at [ASB 2020](https://www.ryan-alcantara.com/projects/p90_Github_Tutorial_for_researchers/).
