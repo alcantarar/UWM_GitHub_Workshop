@@ -1,16 +1,10 @@
 # GitHub Workshop for University of Wisconsin-Milwaukee
 
 # Pre-Workshop Setup
-This section is intended to take you through the steps required before the workshop. 
+This README is intended to take you through the steps required before the workshop. 
 
 There are three things that everyone needs to do BEFORE the workshop. **If you have trouble with any of these steps,
-please reach out to the tutorial organizers.**
-1. First you need to create a [Github](https://github.com/) account. Follow the instructions on their page to setup your account.
-2. The first program everyone will need is some version of Git. Git is the version control software that allows you to see, track, and edit changes to code bases. 
-3. The second program is either [MATLAB](https://www.mathworks.com/), [Python](https://www.python.org/), or [R](https://www.r-project.org/about.html). We will be using these to run example scripts.
-
-**Group Leaders have an additional step to complete BEFORE the workshop. Only do this if you've been assigned the role of Group Leader:**
-- Create one GitHub repository for your group via [these instructions](https://github.com/alcantarar/ASB_Tutorial/wiki/Group-Leader-Instructions).
+please reach out to the tutorial organizers.** Group Leaders have an additional step to complete BEFORE the workshop. **Only do this if you've been assigned the role of Group Leader:Create one GitHub repository for your group via [these instructions](https://github.com/alcantarar/ASB_Tutorial/wiki/Group-Leader-Instructions).**
 
 ## 1. Creating a GitHub Account
 This should be fairly self explanatory. Go the the GitHub [website](https://github.com/), and create a new account.
