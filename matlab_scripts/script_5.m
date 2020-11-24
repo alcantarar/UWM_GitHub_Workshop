@@ -1,22 +1,29 @@
 %% script_5
 %
-%   This script produces the year subscript
+%   This script produces the yellow banner
 %
 
-%today's date
-date_text = date;
-year = date_text(end-3:end);
-%plot text
-text(2.5,-3.5, year, 'FontSize', 24, 'FontWeight', 'bold')
-xlim([-2,12])
-ylim([-8,10])
+%read in data
+data = csvread('data/upper_banner.csv');
+%plot data
+color = [1.0, 0.8235, 0];
+l = patch(data(:,1), data(:,2), color);
+l.LineWidth = 2;
+l.EdgeColor = color; 
+xlim([-2,32])
+ylim([-3,22])
 
 %% SOLUTION: Breakout 1
 
-%today's date
-% date_text = date;
-% year = date_text(end-3:end);
-%plot text
-% text(2.5,-3.5, 'Reviewer 2 is the best', 'FontSize', 24, 'FontWeight', 'bold', 'Color', 'g') % per reviewer comments
-% xlim([-2,12])
-% ylim([-8,10])
+% %read in data
+% data = csvread('data/upper_banner.csv');
+% %plot data
+% color = [1.0, 0.8235, 0];
+% l = patch(data(:,1), data(:,2), color);
+% l.LineWidth = 2;
+% l.EdgeColor = color; 
+% xlim([-2,32])
+% ylim([-3,22])
+% 
+% %plot text
+% text(2.5,1.5, 'Marquette rocks!', 'FontSize', 10)  % per reviewer comment

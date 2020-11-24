@@ -1,16 +1,18 @@
 %% script_4
 %
-%   This script produces the ASB logo
+%   This script produces the banner shadow
 %
 
 %read in data
-data = csvread('data/ASB.csv');
+data = csvread('data/lower_banner.csv');
 %plot data
-plot(data(:,1), data(:,2), 'k-', 'LineWidth',7);
+l = patch(data(:,1), data(:,2), 'black');
+l.LineWidth = 2;
 
 %% SOLUTION: Breakout 1
 
-%read in data
-% data = csvread('data/ASB.csv');
-%plot data
-% plot(data(:,1), data(:,2), 'r-', 'LineWidth',7); % change to red per reviewer comments
+% %read in data
+% data = csvread('data/letter_2.csv');
+% %plot data
+% l = patch(data(:,1), data(:,2), [0, 0.2, 0.4]);  % per reviewer comment
+% l.LineWidth = 2;
