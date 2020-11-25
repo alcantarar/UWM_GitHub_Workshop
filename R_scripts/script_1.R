@@ -50,7 +50,7 @@ test_U <- function() {
 #   # Adds a U body to an existing ggplot2 context
 # 
 #   # read in data
-#   U <- read.csv(file = 'data/U.csv',
+#   U <- read.csv(file = 'data/letter_1.csv',
 #                     header = FALSE)
 #   names(U) <- c('x', 'y')
 #   U[nrow(U) + 1,] <- U[1,]
