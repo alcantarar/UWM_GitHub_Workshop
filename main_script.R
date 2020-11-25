@@ -31,19 +31,19 @@ canvas <- ggplot(NULL) +
         panel.grid=element_blank())
 
 # Implement script_1.R
-canvas <- drawPeach(canvas)
+canvas <- draw_U(canvas)
 
 # Implement script_2.R
-canvas <- drawLeaf(canvas)
+canvas <- draw_W(canvas)
 
 # Implement script_3.R
-canvas <- drawStemAndHalo(canvas)
+canvas <- draw_M(canvas)
 
 # Implement script_4.R
-canvas <- drawASBLogo(canvas)
+canvas <- draw_lower_banner(canvas)
 
 # Implement script_5.R
-canvas <- drawSubtitle(canvas)
+canvas <- draw_upper_banner(canvas)
 
 canvas
 

@@ -14,26 +14,26 @@ library(ggplot2)
 
 draw_W <- function(canvas) {
   # Adds a letter "W" to an existing ggplot2 context
-  
+
   # read in data
-  W <- read.csv(file = 'data/letter_2.csv', 
+  W <- read.csv(file = 'data/letter_2.csv',
                 header = FALSE)
   names(W) <- c('x', 'y')
   W[nrow(W) + 1,] <- W[1,]
-  
+
   # plot data
-  canvas + 
+  canvas +
     geom_polygon(
       data=W,
-      fill='black', 
-      color='black', 
-      size=1, 
-      aes(x=x, y=y))     
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
 
 test_W <- function() {
-  # Displays just the U body
+  # Displays just the W body
   
   canvas <- ggplot(NULL) + 
     theme(axis.title=element_blank(),

@@ -14,21 +14,21 @@ library(ggplot2)
 
 draw_U <- function(canvas) {
   # Adds a letter "U" to an existing ggplot2 context
-  
+
   # read in data
-  U <- read.csv(file = 'data/letter_1.csv', 
+  U <- read.csv(file = 'data/letter_1.csv',
                     header = FALSE)
   names(U) <- c('x', 'y')
   U[nrow(U) + 1,] <- U[1,]
-  
+
   # plot data
-  canvas + 
+  canvas +
     geom_polygon(
       data=U,
-      fill='black', 
-      color='black', 
-      size=1, 
-      aes(x=x, y=y))     
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
 

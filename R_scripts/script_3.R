@@ -14,26 +14,26 @@ library(ggplot2)
 
 draw_M <- function(canvas) {
   # Adds a letter "M" to an existing ggplot2 context
-  
+
   # read in data
-  M <- read.csv(file = 'data/letter_3.csv', 
+  M <- read.csv(file = 'data/letter_3.csv',
                 header = FALSE)
   names(M) <- c('x', 'y')
   M[nrow(M) + 1,] <- M[1,]
-  
+
   # plot data
-  canvas + 
+  canvas +
     geom_polygon(
       data=M,
-      fill='black', 
-      color='black', 
-      size=1, 
-      aes(x=x, y=y))     
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
 
 test_M <- function() {
-  # Displays just the U body
+  # Displays just the M body
   
   canvas <- ggplot(NULL) + 
     theme(axis.title=element_blank(),

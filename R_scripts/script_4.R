@@ -14,26 +14,26 @@ library(ggplot2)
 
 draw_lower_banner <- function(canvas) {
   # Adds lower banner to an existing ggplot2 context
-  
+
   # read in data
-  M <- read.csv(file = 'data/lower_banner.csv', 
+  LB <- read.csv(file = 'data/lower_banner.csv',
                 header = FALSE)
-  names(M) <- c('x', 'y')
-  M[nrow(M) + 1,] <- M[1,]
-  
+  names(LB) <- c('x', 'y')
+  LB[nrow(LB) + 1,] <- LB[1,]
+
   # plot data
-  canvas + 
+  canvas +
     geom_polygon(
-      data=M,
-      fill='black', 
-      color='black', 
-      size=1, 
-      aes(x=x, y=y))     
+      data=LB,
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
 
 test_lower_banner <- function() {
-  # Displays just the U body
+  # Displays just the lower banner
   
   canvas <- ggplot(NULL) + 
     theme(axis.title=element_blank(),
@@ -50,15 +50,15 @@ test_lower_banner <- function() {
 #   # Adds lower banner to an existing ggplot2 context
 # 
 #   # read in data
-#   M <- read.csv(file = 'data/lower_banner.csv',
+#   LB <- read.csv(file = 'data/lower_banner.csv',
 #                     header = FALSE)
-#   names(M) <- c('x', 'y')
-#   M[nrow(M) + 1,] <- M[1,]
+#   names(LB) <- c('x', 'y')
+#   LB[nrow(LB) + 1,] <- LB[1,]
 # 
 #   # plot data
 #   canvas +
 #     geom_polygon(
-#       data=M,
+#       data=LB,
 #       fill=rgb(0, 0.2, 0.4),  # per reviewer comment
 #       color='black',
 #       size=1,
