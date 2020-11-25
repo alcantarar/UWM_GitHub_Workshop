@@ -59,7 +59,7 @@ test_U <- function() {
 #   canvas +
 #     geom_polygon(
 #       data=U,
-#       fill=rgb(1, .8, 0),  # per reviewer comment
+#       fill=rgb(1, 0.8, 0),  # per reviewer comment
 #       color='black',
 #       size=1,
 #       aes(x=x, y=y))
