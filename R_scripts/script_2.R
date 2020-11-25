@@ -50,7 +50,7 @@ test_W <- function() {
 #   # Adds a W body to an existing ggplot2 context
 # 
 #   # read in data
-#   W <- read.csv(file = 'data/letter_1.csv',
+#   W <- read.csv(file = 'data/letter_2.csv',
 #                     header = FALSE)
 #   names(W) <- c('x', 'y')
 #   W[nrow(W) + 1,] <- W[1,]
