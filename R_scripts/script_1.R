@@ -7,33 +7,33 @@
 # comments.
 #
 # You can run this script "individually" by 
-# calling the `testPeach` function defined below.
+# calling the `test_U` function defined below.
 #
 
 library(ggplot2)
 
-drawPeach <- function(canvas) {
-  # Adds a peach body to an existing ggplot2 context
-  
+draw_U <- function(canvas) {
+  # Adds a letter "U" to an existing ggplot2 context
+
   # read in data
-  peach <- read.csv(file = 'data/peach.csv', 
+  U <- read.csv(file = 'data/letter_1.csv',
                     header = FALSE)
-  names(peach) <- c('x', 'y')
-  peach[nrow(peach) + 1,] <- peach[1,]
-  
+  names(U) <- c('x', 'y')
+  U[nrow(U) + 1,] <- U[1,]
+
   # plot data
-  canvas + 
+  canvas +
     geom_polygon(
-      data=peach,
-      fill='peru', 
-      color='black', 
-      size=1, 
-      aes(x=x, y=y))     
+      data=U,
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
 
-testPeach <- function() {
-  # Displays just the peach body
+test_U <- function() {
+  # Displays just the U body
   
   canvas <- ggplot(NULL) + 
     theme(axis.title=element_blank(),
@@ -42,24 +42,24 @@ testPeach <- function() {
           panel.background=element_blank(),
           panel.grid=element_blank())
   
-  drawPeach(canvas)  
+  draw_U(canvas)  
 }
 
 # Solution
-# drawPeach <- function(canvas) {
-#   # Adds a peach body to an existing ggplot2 context
+# draw_U <- function(canvas) {
+#   # Adds a U body to an existing ggplot2 context
 # 
 #   # read in data
-#   peach <- read.csv(file = 'data/peach.csv',
+#   U <- read.csv(file = 'data/letter_1.csv',
 #                     header = FALSE)
-#   names(peach) <- c('x', 'y')
-#   peach[nrow(peach) + 1,] <- peach[1,]
+#   names(U) <- c('x', 'y')
+#   U[nrow(U) + 1,] <- U[1,]
 # 
 #   # plot data
 #   canvas +
 #     geom_polygon(
-#       data=peach,
-#       fill=rgb(0.506, 0.0, 0.937),
+#       data=U,
+#       fill=rgb(1, 0.8, 0),  # per reviewer comment
 #       color='black',
 #       size=1,
 #       aes(x=x, y=y))

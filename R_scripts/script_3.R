@@ -7,38 +7,33 @@
 # comments.
 #
 # You can run this script "individually" by 
-# calling the `testStemAndHalo` function defined below.
+# calling the `test_M` function defined below.
 #
 
 library(ggplot2)
 
-drawStemAndHalo <- function(canvas) {
-  # Add a stem and halo to an existing ggplot2 context
-  
-  # read data
-  outline <- read.csv('data/outline.csv', 
-                      header=FALSE)
-  stem <- data.frame(x=outline[[1]], y=outline[[2]])
-  halo <- data.frame(x=outline[[3]], y=outline[[4]])
-  
-  # remove missing data
-  stem <- stem[stem$x != -999,]
-  
-  # Plot data  
-  canvas + 
-    geom_path(data=stem, 
-              aes(x=x,y=y),
-              color='black',
-              size=1) + 
-    geom_path(data=halo, 
-              aes(x=x, y=y),
-              color='black',
-              size=1)
-  
+draw_M <- function(canvas) {
+  # Adds a letter "M" to an existing ggplot2 context
+
+  # read in data
+  M <- read.csv(file = 'data/letter_3.csv',
+                header = FALSE)
+  names(M) <- c('x', 'y')
+  M[nrow(M) + 1,] <- M[1,]
+
+  # plot data
+  canvas +
+    geom_polygon(
+      data=M,
+      fill='black',
+      color='black',
+      size=1,
+      aes(x=x, y=y))
 }
 
-testStemAndHalo <- function() {
-  # Display just a stem and halo
+
+test_M <- function() {
+  # Displays just the M body
   
   canvas <- ggplot(NULL) + 
     theme(axis.title=element_blank(),
@@ -47,31 +42,25 @@ testStemAndHalo <- function() {
           panel.background=element_blank(),
           panel.grid=element_blank())
   
-  drawStemAndHalo(canvas)
+  draw_M(canvas)  
 }
 
 # Solution
-# drawStemAndHalo <- function(canvas) {
-#   # Add a stem and halo to an existing ggplot2 context
-#   
-#   # read data
-#   outline <- read.csv('data/outline.csv', 
-#                       header=FALSE)
-#   stem <- data.frame(x=outline[[1]], y=outline[[2]])
-#   halo <- data.frame(x=outline[[3]], y=outline[[4]])
-#   
-#   # remove missing data
-#   stem <- stem[stem$x != -999,]
-#   
-#   # Plot data  
-#   canvas + 
-#     geom_path(data=stem, 
-#               aes(x=x,y=y),
-#               color='black',
-#               size=10) + 
-#     geom_path(data=halo, 
-#               aes(x=x, y=y),
-#               color='black',
-#               size=10)
-#   
+# draw_M <- function(canvas) {
+#   # Adds a M body to an existing ggplot2 context
+# 
+#   # read in data
+#   M <- read.csv(file = 'data/letter_3.csv',
+#                     header = FALSE)
+#   names(M) <- c('x', 'y')
+#   M[nrow(M) + 1,] <- M[1,]
+# 
+#   # plot data
+#   canvas +
+#     geom_polygon(
+#       data=M,
+#       fill=rgb(1, 0.8, 0),  # per reviewer comment
+#       color='black',
+#       size=1,
+#       aes(x=x, y=y))
 # }
