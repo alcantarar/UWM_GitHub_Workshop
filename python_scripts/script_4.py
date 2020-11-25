@@ -11,32 +11,31 @@
 		$ python python_scripts/script_4.py
 '''
 
-def drawASBLogo():
-	'''Draw the ASB logo'''
+
+def drawLB():
+	'''Draw the lower banner'''
 	# read in data
-	logo = pd.read_csv(
-		filepath_or_buffer='data/ASB.csv',
-		header=None)
+	LB = pd.read_csv('data/lower_banner.csv',
+					header = None)
+	x, y = list(LB[0]), list(LB[1])
+	x.append(x[0])
+	y.append(y[0])
 
 	# plot data
-	ax.plot(logo[0], logo[1], 
-		linewidth=7, 
-		color='black')
+	ax.fill(x, y, color = 'black')
 
-# # Solution
-# def drawASBLogo():
-# 	'''Draw the ASB logo'''
+# Solution
+# def drawLB():
+# 	'''Draw the lower banner'''
 # 	# read in data
-# 	logo = pd.read_csv(
-# 		filepath_or_buffer='data/ASB.csv',
-# 		header=None)
-
+# 	LB = pd.read_csv('data/lower_banner.csv',
+# 					header = None)
+# 	x, y = list(LB[0]), list(LB[1])
+# 	x.append(x[0])
+# 	y.append(y[0])
+#
 # 	# plot data
-# 	ax.plot(logo[0], logo[1], 
-# 		linewidth=7, 
-# 		color='red')
-
-
+# 	ax.fill(x, y, color = (0, 0.2, 0.4))  # per reviewer comment
 
 
 # You will not need to edit the code below
@@ -46,10 +45,10 @@ if __name__ == '__main__':
 	import matplotlib.pyplot as plt
 	fig, ax = plt.subplots(1, 1)		
 	ax.axis('off')
-	drawASBLogo()
+	drawLB()
 	plt.show()
 else:
 	# We are running this script from within main_script.py
 	# Thus all the dependencies and globals have already 
 	# been imported.
-	drawASBLogo()
+	drawLB()

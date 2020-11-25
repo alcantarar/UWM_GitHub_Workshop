@@ -12,46 +12,33 @@
 		
 '''
 
-def drawStemAndHalo():
+
+def drawM():
+	'''Draw the M body'''
 	# read in data
-	outline = pd.read_csv(
-		filepath_or_buffer='data/outline.csv',
-		header = None)
-
-	# remove missing data 
-	outline[outline == -999] = 'NaN'
-
-	width = 3
+	M = pd.read_csv('data/letter_3.csv',
+					header = None)
+	x, y = list(M[0]), list(M[1])
+	x.append(x[0])
+	y.append(y[0])
 
 	# plot data
-	ax.plot(outline[0], outline[1], 
-		linewidth=width,
-		color='black')
-
-	ax.plot(outline[2], outline[3], 
-		linewidth=width,
-		color='black')
+	ax.fill(x, y, color = 'black')
+	ax.plot(x, y, color = 'black', linewidth = 2)
 
 # Solution
-# def drawStemAndHalo():
+# def drawM():
+# 	'''Draw the M body'''
 # 	# read in data
-# 	outline = pd.read_csv(
-# 		filepath_or_buffer='data/outline.csv',
-# 		header = None)
-
-# 	# remove missing data 
-# 	outline[outline == -999] = 'NaN'
-
-# 	width = 10
-
+# 	M = pd.read_csv('data/letter_3.csv',
+# 					header = None)
+# 	x, y = list(M[0]), list(M[1])
+# 	x.append(x[0])
+# 	y.append(y[0])
+#
 # 	# plot data
-# 	ax.plot(outline[0], outline[1], 
-# 		linewidth=width, 
-# 		color='black')
-
-# 	ax.plot(outline[2], outline[3], 
-# 		linewidth=width, 
-# 		color='black')
+# 	ax.fill(x, y, color = (1, 0.8, 0))  # per reviewer comment
+# 	ax.plot(x, y, color = 'black', linewidth = 2)
 
 
 # You will not need to edit the code below
@@ -61,10 +48,10 @@ if __name__ == '__main__':
 	import matplotlib.pyplot as plt
 	fig, ax = plt.subplots(1, 1)		
 	ax.axis('off')
-	drawStemAndHalo()
+	drawM()
 	plt.show()
 else:
 	# We are running this script from within main_script.py
 	# Thus all the dependencies and globals have already 
 	# been imported.
-	drawStemAndHalo()
+	drawM()

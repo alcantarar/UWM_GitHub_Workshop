@@ -2,8 +2,8 @@
 '''
 	main_script.py
 	---------------------------------------------------------
-	This is the ASB tutorial master Python script, the main 
-	entry point for running this tutorial in Python. You will 
+	This is the UWM Workshop master Python script, the main
+	entry point for running this workshop in Python. You will
 	not need to modify this file.
 
 	Usage:
@@ -48,6 +48,7 @@ def main():
 		msg = '\nERROR: %s is not installed. ' % mod
 		msg += 'Try running:\n\n\t$ conda install %s' % mod
 		print(msg)
+
 
 if __name__ == '__main__':
 	main()

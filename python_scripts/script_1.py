@@ -11,31 +11,32 @@
 		$ python python_scripts/script_1.py
 '''
 
-def drawBody():
-	'''Draw the peach body'''
+
+def drawU():
+	'''Draw the U body'''
 	# read in data
-	peach = pd.read_csv('data/peach.csv',
+	U = pd.read_csv('data/letter_1.csv',
 					header = None)
-	x, y = list(peach[0]), list(peach[1])
+	x, y = list(U[0]), list(U[1])
 	x.append(x[0])
 	y.append(y[0])
 
 	# plot data
-	ax.fill_between(x, y, color = 'peru')
+	ax.fill(x, y, color = 'black')
 	ax.plot(x, y, color = 'black', linewidth = 2)
 
 # Solution
-# def drawBody():
-# 	'''Draw the peach body'''
+# def drawU():
+# 	'''Draw the U body'''
 # 	# read in data
-# 	peach = pd.read_csv('data/peach.csv',
+# 	U = pd.read_csv('data/letter_1.csv',
 # 					header = None)
-# 	x, y = list(peach[0]), list(peach[1])
+# 	x, y = list(U[0]), list(U[1])
 # 	x.append(x[0])
 # 	y.append(y[0])
-
+#
 # 	# plot data
-# 	ax.fill_between(x, y, color = (0.506, 0.0, 0.937))
+# 	ax.fill(x, y, color = (1, 0.8, 0))  # per reviewer comment
 # 	ax.plot(x, y, color = 'black', linewidth = 2)
 
 
@@ -46,10 +47,10 @@ if __name__ == '__main__':
 	import matplotlib.pyplot as plt
 	fig, ax = plt.subplots(1, 1)		
 	ax.axis('off')
-	drawBody()
+	drawU()
 	plt.show()
 else:
 	# We are running this script from within main_script.py
 	# Thus all the dependencies and globals have already 
 	# been imported.
-	drawBody()
+	drawU()
