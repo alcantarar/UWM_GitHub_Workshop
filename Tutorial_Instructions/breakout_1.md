@@ -1,14 +1,13 @@
-# Breakout Room #1
+# Breakout Room Instructions
 
 ## Background
-You and your collaborators have made a recent discovery that will surely result in winning the prestigious
-Nobel Peach Prize, awarded to the group of biomechanists with the best peach-related figure made entirely with 
-code! Your group worked for months, submitted the figure to Nature, and just received reviewer comments. 
-Your group will be able to quickly address these comments in parallel thanks to Git and GitHub!
+You and your group are working together to re-create the UWM logo entirely with code for a state-wide data visualization
+conference! Your group has worked for months, submitted your project, and just received the reviewer comments. 
+Your group will be able to quickly address these comments in parallel thanks to version control tools like Git and GitHub!
 
-The code used to generate your figure is comprised of an upper-level script (e.g. `ASB_Tutorial/main_script`), which 
-calls five numbered subscripts (e.g. `ASB_Tutorial/MATLAB_scripts/script_1`). The data required to generate your 
-figure is stored as CSV files at `ASB_Tutorial/data/`. 
+The code used to generate your figure is comprised of an upper-level script (e.g. `UWM_GitHub_Workshop/main_script`), 
+which calls five numbered subscripts (e.g. `UWM_GitHub_Workshop/MATLAB_scripts/script_1`). The data required to 
+generate your figure is stored as CSV files at `UWM_GitHub_Workshop/data/`. 
 
 **If you need help remembering the git functions, refer to [`git_cheatsheet.md`](./git_cheatsheet.md).**
 
@@ -33,7 +32,7 @@ creates isolated versions of the current state of the repository and allows grou
 without affecting one another or the script stored in the remote (online) repository. **Name each branch after the 
 respective subscript(s) that will be fixed.**
 
-1. Navigate to the main page of your group's repository on GitHub (e.g. www.github.com/GROUP-LEADER-USERNAME/ASB_Tutorial)
+1. Navigate to the main page of your group's repository on GitHub (e.g. www.github.com/GROUP-LEADER-USERNAME/UWM_GitHub_Workshop)
 2. Click the branch selector menu:    
     ![](../media/branch-selection-dropdown.png)
 3. Type in a descriptive name for your branch (like the name of subscript you're changing), then select **Create branch**:    
@@ -59,11 +58,12 @@ $ cd Desktop
  and version of Git Bash.*
 
 Now you can clone the remote repository from GitHub.com to your `Desktop` folder. `URL` is the repository of
-the group leader and will include his or her username. It should be like `https://github.com/GROUP-LEADER-USERNAME/ASB_Tutorial`.
+the group leader and will include his or her username. It should be like `https://github.com/GROUP-LEADER-USERNAME/UWM_GitHub_Workshop`.
 ```
 $ git clone URL
 ```
-You now have a copy of the repository located at `~/Desktop`. Go check it out! You'll see all the files that are present on the main page (master branch) of your group's repository on GitHub. In Git Bash, navigate into the repository you just cloned:
+You now have a copy of the repository located at `~/Desktop`. Go check it out! You'll see all the files that are present 
+on the main page (master branch) of your group's repository on GitHub. In Git Bash, navigate into the repository you just cloned:
 ```
 $ cd ASB_Tutorial
 ```
@@ -79,15 +79,17 @@ Execute the following to switch to the branch you made (don't include `remotes/o
 ```
 $ git checkout YOUR-BRANCH-NAME
 ```
-Git should return a message explaining that you `"Switched to branch YOUR-BRANCH-NAME"`. Now you're ready to address some very reasonable reviewer comments!
+Git should return a message explaining that you `"Switched to branch YOUR-BRANCH-NAME"`. 
+Now you're ready to address some very reasonable reviewer comments!
 
 ### Generate Original Figure
-Open and run `ASB_Tutorial/main_script`. This is the figure you submitted to Nature and will be revising per reviewer
-comments.
+Open and run `UWM_GitHub_Workshop/main_script`. This is the figure you submitted to the conference and will be revising 
+per reviewer comments.
 
 ## 2. Making changes to files
 ### a. Changing your assigned subscript 
-Open MATLAB (or preferred IDE for R and Python scripts) and make the requested change in [`reviewer_comments.md`](./reviewer_comments.md). Save the debugged file with the same filename.
+Open MATLAB (or preferred IDE for R and Python scripts) and make the requested change in 
+[`reviewer_comments.md`](./reviewer_comments.md). Save the debugged file with the same filename.
 
 ### b. Commit changes
 You made changes to a file in the repository and want these changes to be recorded by Git. Git takes "snapshots" called 
@@ -102,11 +104,15 @@ These steps are performed in Git Bash and are outlined below.
 #### 1. Tell Git that files have been changed and should be included in the commit. 
 Git will compare the current state of the files to their previous state and identify any changes made. Files that have
 been changed will be *staged*. In the "snapshot" analogy, this step is like wrangling your family members right before 
-taking the picture. Don't forget the "`.`" in the command below. This informs Git that you want to stage all the changed files in the repository. If many files are being changed, commits can become complex and difficult to differentiate. If you want to stage only specific files, replace "`.`" with the filenames separated by a space, breaking a single complex commit into several smaller ones.
+taking the picture. Don't forget the "`.`" in the command below. This informs Git that you want to stage all the changed 
+files in the repository. If many files are being changed, commits can become complex and difficult to differentiate. If 
+you want to stage only specific files, replace "`.`" with the filenames separated by a space, breaking a single complex 
+commit into several smaller ones.
 ```
 $ git add .
 ```
-Use the `status` function to view the files Git has identified as undergoing some change (lines starting with `#>>>` represent an example returned message):
+Use the `status` function to view the files Git has identified as undergoing some change (lines starting with `#>>>` 
+represent an example returned message):
 ```
 $ git status
 
@@ -124,7 +130,11 @@ This returned message tells you a few things:
 4. Names of the changed file(s) (line 6). 
 
 #### 2 & 3. Tell Git when to make the commit and what changed
-To continue using the "snapshot" analogy, you need to decide when to take the "snapshot". In this case, you changed some code and this represents a meaningful level of changes made to your script. To help organize commits, you need to add a  message that will be associated with the staged changes. For now, make it short and sweet. For more information on meaningful commit messages, read [this blog post](https://chris.beams.io/posts/git-commit/) later. Remember: Git will only commit the *staged* changes. Commit changes by using the `commit` command with the `-m` (message) tag: 
+To continue using the "snapshot" analogy, you need to decide when to take the "snapshot". In this case, you changed some 
+code and this represents a meaningful level of changes made to your script. To help organize commits, you need to add a  
+message that will be associated with the staged changes. For now, make it short and sweet. For more information on 
+meaningful commit messages, read [this blog post](https://chris.beams.io/posts/git-commit/) later. Remember: Git will 
+only commit the *staged* changes. Commit changes by using the `commit` command with the `-m` (message) tag: 
 ```
 $ git commit -m "COMMIT MESSAGE GOES HERE IN QUOTATIONS"
 ```
@@ -136,12 +146,12 @@ convenient, you can send all your commits to the repository on GitHub. This proc
 local repository to the remote repository.
 
 To push commits to your remote repository on GitHub, run:
-
-*The first time you push to a repository, Git Bash or Terminal may request that you login to your github account at this
-time. Enter your username and password and press Enter.* 
 ```
 $ git push 
 ```
+*The first time you push to a repository, Git Bash or Terminal may request that you login to your github account at this
+time. Enter your username and password and press Enter.* 
+
 Now your branch on the remote repository is updated with these changes! Later, we will use GitHub to view the 
 line-by-line changes made to the script as well as your commit message.
 
@@ -161,11 +171,11 @@ the **Pull requests** tab:
 
 and then select the green "New pull request" button.
 
-If you click on the *base repository*, you'll see multiple options because the original `ASB_Tutorial` repository is owned
+If you click on the *base repository*, you'll see multiple options because the original `UWM_GitHub_Workshop` repository is owned
 by `alcantarar` and has just been copied to your group leader's account via a process called [*forking*](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
 Forking a public repository allows you to have a copy, make any changes, and potentially contribute to the original repository
-via pull requests. However, in this tutorial you are just contributing to your group leader's forked `ASB_Tutorial` repository,
-not the original one. Set the *base repository* to `GROUP-LEADER-USERNAME/ASB_Tutorial`, *base branch* to `master`, and the 
+via pull requests. However, in this tutorial you are just contributing to your group leader's forked `UWM_GitHub_Workshop` repository,
+not the original one. Set the *base repository* to `GROUP-LEADER-USERNAME/UWM_GitHub_Workshop`, *base branch* to `master`, and the 
 *compare branch* to your branch from the dropdown menu:    
 
 ![](../media/PR-dropdown.png)
@@ -213,6 +223,6 @@ Go ahead and run `main_script` on your own. If all the changes from each branch 
 `master`, then `main_script` should produce the reviewer's version of your figure:
 
 <div align="center">
-<img src = "../media/breakout2_fig.png" >
-<p>Doesn't it look better? :wink:</p>
+<img src = "../media/reviewer_version.png" >
+<p>Wait a second...</p>
 </div>
