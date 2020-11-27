@@ -1,4 +1,4 @@
-# Breakout Room Instructions
+# Part 1: Making Changes with Version Control
 
 ## Background
 You and your group are working together to re-create the UWM logo entirely with code for a state-wide data visualization
@@ -63,7 +63,7 @@ the group leader and will include his or her username. It should be like `https:
 $ git clone URL
 ```
 You now have a copy of the repository located at `~/Desktop`. Go check it out! You'll see all the files that are present 
-on the main page (master branch) of your group's repository on GitHub. In Git Bash, navigate into the repository you just cloned:
+on the main page (main branch) of your group's repository on GitHub. In Git Bash, navigate into the repository you just cloned:
 ```
 $ cd ASB_Tutorial
 ```
@@ -72,7 +72,7 @@ are isolated versions of a (local and/or remote) repository. You can view the av
 ```
 $ git branch -a
 ```
-You should see the `master` branch as well as any branches your group has made, although they may say `remotes/origin/` 
+You should see the `main` branch as well as any branches your group has made, although they may say `remotes/origin/` 
 before your `BRANCH-NAME`. Don't worry, this just indicates that the branch is from your remote repository on GitHub.
 
 Execute the following to switch to the branch you made (don't include `remotes/origin/`):
@@ -158,7 +158,7 @@ line-by-line changes made to the script as well as your commit message.
 **Before moving on, make sure all group members have fixed their assigned scripts, and staged/committed/pushed their changes.**
 
 ## 3. Merging branches
-At this point, each branch contains their respective fixed subscripts. However, `main_script` on the `master` branch 
+At this point, each branch contains their respective fixed subscripts. However, `main_script` on the `main` branch 
 on GitHub still isn't updated because you haven't merged all these changes together. The way this is accomplished in 
 GitHub is through a process called a *Pull Request*. Pull requests merge two branches, applying any changes made in 
 one branch to the other branch. 
@@ -175,7 +175,7 @@ If you click on the *base repository*, you'll see multiple options because the o
 by `alcantarar` and has just been copied to your group leader's account via a process called [*forking*](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
 Forking a public repository allows you to have a copy, make any changes, and potentially contribute to the original repository
 via pull requests. However, in this tutorial you are just contributing to your group leader's forked `UWM_GitHub_Workshop` repository,
-not the original one. Set the *base repository* to `GROUP-LEADER-USERNAME/UWM_GitHub_Workshop`, *base branch* to `master`, and the 
+not the original one. Set the *base repository* to `GROUP-LEADER-USERNAME/UWM_GitHub_Workshop`, *base branch* to `main`, and the 
 *compare branch* to your branch from the dropdown menu:    
 
 ![](../media/PR-dropdown.png)
@@ -187,13 +187,13 @@ select the green "Create pull request" button to confirm your decision:
   
 ![](../media/PR-text.png)    
 
-Now, GitHub will compare the changed files in your branch to their original state in the master branch and try to implement
+Now, GitHub will compare the changed files in your branch to their original state in the main branch and try to implement
 these changes. In some cases, there may be conflicts where multiple contributors have changed the same line of code. These
 conflicts are typically resolved manually, but good project organization can generally avoid merge conflicts. **If GitHub 
 finds conflicts with your pull request, ask for help from the Tutorial Team before merging the pull request.**
 
 If there are no conflicts (there shouldn't be any), select the green "Merge pull request" button and confirm your choice.
-This will update the master branch to include the changes you made in your branch. **This process will need to be 
+This will update the main branch to include the changes you made in your branch. **This process will need to be 
 accomplished for each branch.**    
 
 ![](../media/merge-PR.png)    
@@ -203,13 +203,13 @@ in Git, so it's best practice to make one for each feature you'd like to add to 
      
 ![](../media/delete-branch.png)
 
-At this point, the changes have been merged in the `master` branch in the remote repository on GitHub, but not your local 
+At this point, the changes have been merged in the `main` branch in the remote repository on GitHub, but not your local 
 copy. Updating your local repository is easy. This process is called *pulling*.
 
 ## 4. Pull changes from Remote Repository
-In Git Bash, switch back to the `master` branch:
+In Git Bash, switch back to the `main` branch:
 ```
-$ git checkout master
+$ git checkout main
 ```
 Then, tell Git to check the remote repository for any changes that might have occurred and pull those changes over to your
 local copy:
@@ -220,9 +220,127 @@ Now your local copy is up to date with the remote repository on GitHub.
 
 ## Moment of Truth
 Go ahead and run `main_script` on your own. If all the changes from each branch were merged into
-`master`, then `main_script` should produce the reviewer's version of your figure:
+`main`, then `main_script` should produce the reviewer's version of your figure:
 
 <div align="center">
 <img src = "../media/reviewer_version.png" >
 <p>Wait a second...</p>
 </div>
+
+# Part 2: Undoing Changes with Version Control
+
+It appears that one of your reviewers may have a Marquette graduate. After a conversation with conference organizers,
+you decide to undo the reviewer's changes and submit the original figure. In this example, you would likely have a copy
+of the figure to re-submit, but undoing changes with version control is most beneficial when many changes have been made
+to several files over a long period of time. Any change can be undone with proper version control. 
+
+## Undoing changes
+It should be noted that there are **many** ways to undo changes with Git and GitHub. The following resources can help
+with different levels of undoing changes, ranging from typos in commit messages to reverting whole repositories back:
+* [How to undo (almost) anything with git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
+* [Undoing commits & changes](https://www.atlassian.com/git/tutorials/undoing-changes)
+* [Oh shit, Git!?!](https://www.ohshitgit.com)
+
+For the current example, one of the reviewers suggested some changes that need to be undone. Since all changes were
+made in separate branches and merged into the `main` branch via pull requests, undoing these changes can be done by 
+reverting each pull request on GitHub.
+
+## Reverting a recent pull request
+1. Click on the "Pull requests" tab in your group's repository page on GitHub. GitHub automatically filters pull requests 
+to only show open (incomplete) ones. Click on "Closed" to view completed Pull Requests:
+
+    ![](../media/closed_pr.png)
+
+    You should see all of the pull requests completed during the tutorial. Descriptive branch names allow you to quickly 
+    identify what changes were made:
+
+    ![](../media/past_prs.png)
+
+2. Select the Pull Request that you created to complete the reviewer's edits and click "Revert":
+
+    ![](../media/revert_pr1.png)
+
+    **What is going on here?** You are effectively creating a new pull request that does the exact opposite of your past 
+    pull request. This is different than just deleting the old pull request because the history of your repository is 
+    maintained. If, for whatever reason, you wanted to go back and see what changes you made because of the reviewer, 
+    you could. There may be instances where you want to completely erase a commit or pull request, but doing so is beyond 
+    the scope of this tutorial. 
+
+3. Select "Create pull request". Note that the new pull request title auto-populated, explaining that this is reverting a 
+prior change. Then you can merge your new pull request by selecting "Merge pull request" and "Confirm merge," just like 
+you did when merging branches earlier in the tutorial.
+
+4. Delete branch.
+
+5. Now the remote repository has been reverted, but your local repository isn't. Remember that you can update your local
+repository by checking out the `main` branch (if you're not there already) and using the `pull` command:
+```
+$ git checkout main
+$ git pull
+```
+Running the `main_script` file will produce your original figure! This concludes the hands-on portion of the workshop. 
+Check out some of the topics below for additional Git and GitHub features that may be beneficial. 
+
+# If you have time...
+
+## Visualizing Branches and Pull Requests
+Your group has made several changes to your repository, and GitHub visualizes these changes as a directed graph. 
+Click on the "Insights" tab on your repostory page and then select "Network."
+
+![](../media/network2.png)
+
+Hovering over the circles will reveal details about the commit, and clicking on it will show the line-by-line changes. 
+You can also see where branches originated and when they were merged back into the `main` branch via a pull request. 
+In the picture above, we can also see that two branches were made to revert the reviewer comment changes made to 
+`script_1` and `script_2`.
+
+## Future considerations: project management with GitHub
+GitHub has many tools that help with project management, including [issue tracking](https://guides.github.com/features/issues/) 
+and [project boards](https://docs.github.com/en/github/managing-your-work-on-github/creating-a-project-board). 
+We highly recommend checking out the [GitHub Guides](https://guides.github.com/) for more information on GitHub project 
+management features. Check out the [issues page](https://github.com/alcantarar/ASB_Tutorial/issues?q=) or 
+[pull request pages](https://github.com/alcantarar/ASB_Tutorial/pulls?q=is%3Apr+is%3Aclosed) of the repository we used 
+to make this tutorial for an example of how GitHub's features allow for remote collaboration.
+
+## Further considerations: reverting multiple changes at once
+In this situation, there were 5 pull requests that needed to be undone. In the future, you may need to undo so many changes
+that reverting each pull request becomes too cumbersome. In this case, you can identify a particular commit where 
+everything was how you want it now and undo all changes since then. You will not be deleting the changes made since then, 
+but instead creating a new commit that effectively undoes all the changes at once. This method maintains the repository 
+history in case you need to reference it at a later date.
+
+Consider a repository with many changes (top commit is most recent):
+```
+Commit  Message
+jn1239  'fix typo in feature 2'
+3hncb9  'debug feature 1'
+...
+mn3290  'add feature 2'
+980dfn  'add feature 1'
+asedf9  'everything is debugged and working perfectly'
+```
+If you wanted to undo all the commits since `asedf9` while maintaining the history, you could checkout the `main` 
+(or `master` depending on when your repository settings) branch and then execute:
+```
+$ git checkout asedf9 .
+```
+Now your *local* repository is as it was at the `asedf9` snapshot. Because this differs from the most recent snapshot 
+`jn1239`, you need to commit these new changes:
+```
+$ git commit -m "revert back to asedf9 because I don't want features 1 & 2 anymore"
+```
+And your new commit history would look like this:
+```
+Commit  Message
+nds435  'revert back to asedf9 because I don't want features 1 & 2 anymore'
+jn1239  'fix typo in feature 2'
+3hncb9  'debug feature 1'
+...
+mn3290  'add feature 2'
+980dfn  'add feature 1'
+asedf9  'everything is debugged and working perfectly'
+```
+
+This is a viable solution for the workshop, but undoing recent pull requests in GitHub allows group members to 
+undo their changes instead of one person making an executive decision to revert the entire repository back
+to a particular snapshot.
