@@ -20,4 +20,4 @@ Thus, I have provided the following comments:
 - **script_4**
     - Please change the color of the lower banner to [0, 0.2, 0.4].
 - **script_5**
-    - Please add "Marquette rocks!" at x = 2.5, y = 1.5.
+    - Please add "Marquette rocks!" to the upper banner.
