@@ -3,7 +3,7 @@
 %   This script produces the yellow banner
 %
 
-%read in data
+read in data
 data = csvread('data/upper_banner.csv');
 %plot data
 color = [1.0, 0.8235, 0];
