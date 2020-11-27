@@ -230,9 +230,9 @@ Go ahead and run `main_script` on your own. If all the changes from each branch 
 # Part 2: Undoing Changes with Version Control
 
 It appears that one of your reviewers may have a Marquette graduate. After a conversation with conference organizers,
-you decide to undo the reviewer's changes and submit the original figure. In this example, you would likely have a copy
-of the figure to re-submit, but undoing changes with version control is most beneficial when many changes have been made
-to several files over a long period of time. Any change can be undone with proper version control. 
+you decide to ignore that reviewer's comments and submit the original figure. In this particular example, you would likely 
+still have a copy of the original figure to re-submit, but undoing changes with version control is most beneficial when 
+many changes have been made to many files over a long period of time. Any change can be undone with proper version control. 
 
 ## Undoing changes
 It should be noted that there are **many** ways to undo changes with Git and GitHub. The following resources can help
@@ -294,7 +294,7 @@ You can also see where branches originated and when they were merged back into t
 In the picture above, we can also see that two branches were made to revert the reviewer comment changes made to 
 `script_1` and `script_2`.
 
-## Future considerations: project management with GitHub
+## Project management with GitHub
 GitHub has many tools that help with project management, including [issue tracking](https://guides.github.com/features/issues/) 
 and [project boards](https://docs.github.com/en/github/managing-your-work-on-github/creating-a-project-board). 
 We highly recommend checking out the [GitHub Guides](https://guides.github.com/) for more information on GitHub project 
@@ -302,7 +302,7 @@ management features. Check out the [issues page](https://github.com/alcantarar/A
 [pull request pages](https://github.com/alcantarar/ASB_Tutorial/pulls?q=is%3Apr+is%3Aclosed) of the repository we used 
 to make this tutorial for an example of how GitHub's features allow for remote collaboration.
 
-## Further considerations: reverting multiple changes at once
+## Reverting multiple changes at once
 In this situation, there were 5 pull requests that needed to be undone. In the future, you may need to undo so many changes
 that reverting each pull request becomes too cumbersome. In this case, you can identify a particular commit where 
 everything was how you want it now and undo all changes since then. You will not be deleting the changes made since then, 
