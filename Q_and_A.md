@@ -27,13 +27,13 @@ A clear distinction we need to make is that when you checkout a branch, your ent
 contain all of your files, so you don't need to worry about knowing ahead of time which files you'll need
 to change. You can just make changes in a branch, committing them along the way. 
 When you are satisfied with the changes you've made in your branch, you can merge them into the master 
-branch via a Pull Request like you did during [`Breakout 1`](Tutorial_Instructions/breakout_1.md).
+branch via a Pull Request like you did during [`Breakout 1`](Workshop_Instructions/breakout_1.md).
 
 **How does Git handle reverting back to an earlier version (from version n to n-2, for example)? 
 What happens to versions n and n-1?**
 
 We didn't have time to cover this in the 2020 ASB Tutorial, but it's been included in the associated video on youtube.
-Undoing changes is handled by [`Breakout 2`](Tutorial_Instructions/breakout_2.md) in a way
+Undoing changes is handled by [`Breakout 2`](Workshop_Instructions/breakout_2.md) in a way
 that *maintains the integrity of your repository history*. This means that when we say
 your repository is "reverted", a new commit is being made that undoes the prior changes. The changes you 
 made in version n and n-1 are still present in your repository's commit history in case you ever want to view them. 
@@ -42,7 +42,7 @@ However, version n+1 now contains changes that are the exact opposite of version
  portion of Breakout 2.
  
  ## Additional Git/GitHub Resources
- * [Git Cheatsheet](Tutorial_Instructions/git_cheatsheet.md) has the most-common commands and their definitions.
+ * [Git Cheatsheet](Workshop_Instructions/git_cheatsheet.md) has the most-common commands and their definitions.
  * [How to undo (almost) anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/) is a blog
  by GitHub on undoing commits, messages, etc.
  * [GitHub's Guides](https://guides.github.com/) contains many instructional blog posts covering everything you need to know
