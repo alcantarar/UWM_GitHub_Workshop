@@ -45,7 +45,7 @@ test_lower_banner <- function() {
   draw_lower_banner(canvas)  
 }
 
-# Solution
+## Solution ----
 # draw_lower_banner <- function(canvas) {
 #   # Adds lower banner to an existing ggplot2 context
 # 

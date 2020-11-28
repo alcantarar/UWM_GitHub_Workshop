@@ -45,7 +45,7 @@ test_upper_banner <- function() {
   draw_upper_banner(canvas)  
 }
 
-# Solution
+## Solution ----
 # draw_upper_banner <- function(canvas) {
 #   # Adds lower banner to an existing ggplot2 context
 # 
@@ -59,7 +59,7 @@ test_upper_banner <- function() {
 #   canvas +
 #     geom_polygon(
 #       data=UB,
-#       fill=rgb(1, 0.8235, 0), 
+#       fill=rgb(1, 0.8235, 0),
 #       color=NA,
 #       size=1,
 #       aes(x=x, y=y)) +

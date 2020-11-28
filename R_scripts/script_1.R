@@ -45,7 +45,7 @@ test_U <- function() {
   draw_U(canvas)  
 }
 
-# Solution
+## Solution ----
 # draw_U <- function(canvas) {
 #   # Adds a U body to an existing ggplot2 context
 # 
