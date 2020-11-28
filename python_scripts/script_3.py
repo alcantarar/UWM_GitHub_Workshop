@@ -26,7 +26,7 @@ def drawM():
 	ax.fill(x, y, color = 'black')
 	ax.plot(x, y, color = 'black', linewidth = 2)
 
-# Solution
+## Solution ----
 # def drawM():
 # 	'''Draw the M body'''
 # 	# read in data

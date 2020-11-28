@@ -2,8 +2,8 @@
 
 ## Background
 You and your group are working together to re-create the UWM logo entirely with code for a state-wide data visualization
-conference! Your group has worked for months, submitted your project, and just received the reviewer comments. 
-Your group will be able to quickly address these comments in parallel thanks to version control tools like Git and GitHub!
+conference! Your group submitted your figure and just received the reviewer comments. 
+Thanks to version control tools like Git and GitHub, your group will be able to quickly address these comments in parallel.
 
 The code used to generate your figure is comprised of an upper-level script (e.g. `UWM_GitHub_Workshop/main_script`), 
 which calls five numbered subscripts (e.g. `UWM_GitHub_Workshop/MATLAB_scripts/script_1`). The data required to 
@@ -17,7 +17,7 @@ by running `main_script`.
 
 ## 1. Organize
 Your project leader has already invited you as collaborators on the remote repository on GitHub. If this hasn't 
-happened yet, ask for help from the Tutorial Team. It may be helpful to have one group member share their screen while 
+happened yet, ask for help from the Workshop Team. It may be helpful to have one group member share their screen while 
 everyone is working through this tutorial. 
 
 ### a. Assign Tasks
@@ -39,7 +39,7 @@ respective subscript(s) that will be fixed.**
     ![](../media/branch-creation-text.png)
     
     If you can't find the "create branch" button, you might not have accepted the invitation to collaborate on the 
-    repository. Check your email or ask for help from the Tutorial Team.
+    repository. Check your email or ask for help from the Workshop Team.
     
 ### c. Clone repository
 If you're going to be changing code, you need a copy of it on your computer. This is initially done through a process
@@ -52,9 +52,9 @@ Open Git Bash and navigate to the `Desktop` folder by using the `cd` (change dir
 $ cd Desktop
 ```
 *If you're having trouble navigating into your Desktop folder, it may be possible that your desktop folder is located
- on a different hard drive (like OneNote). Windows users can open file explorer, right click on the file they'd like
+ on a different hard drive (like OneNote). Windows users can open file explorer, right click on the folder they'd like
  to clone the repo into, and select `Git Bash Here`. This effectively sets the current directory in Git Bash. You can 
- also ask for help from the Tutorial Team. This process can vary depending on operating system, spaces in folder names, 
+ also ask for help from the Workshop Team as this process can vary depending on operating system, spaces in folder names, 
  and version of Git Bash.*
 
 Now you can clone the remote repository from GitHub.com to your `Desktop` folder. `URL` is the repository of
@@ -65,7 +65,7 @@ $ git clone URL
 You now have a copy of the repository located at `~/Desktop`. Go check it out! You'll see all the files that are present 
 on the main page (main branch) of your group's repository on GitHub. In Git Bash, navigate into the repository you just cloned:
 ```
-$ cd ASB_Tutorial
+$ cd UWM_GitHub_Workshop
 ```
 Before making any changes to files, you need to *checkout* the branch you created on GitHub. Remember that branches 
 are isolated versions of a (local and/or remote) repository. You can view the available branches by executing:
@@ -190,7 +190,7 @@ select the green "Create pull request" button to confirm your decision:
 Now, GitHub will compare the changed files in your branch to their original state in the main branch and try to implement
 these changes. In some cases, there may be conflicts where multiple contributors have changed the same line of code. These
 conflicts are typically resolved manually, but good project organization can generally avoid merge conflicts. **If GitHub 
-finds conflicts with your pull request, ask for help from the Tutorial Team before merging the pull request.**
+finds conflicts with your pull request, ask for help from the Workshop Team before merging the pull request.**
 
 If there are no conflicts (there shouldn't be any), select the green "Merge pull request" button and confirm your choice.
 This will update the main branch to include the changes you made in your branch. **This process will need to be 
@@ -229,10 +229,12 @@ Go ahead and run `main_script` on your own. If all the changes from each branch 
 
 # Part 2: Undoing Changes with Version Control
 
-It appears that one of your reviewers may have a Marquette graduate. After a conversation with conference organizers,
-you decide to ignore that reviewer's comments and submit the original figure. In this particular example, you would likely 
-still have a copy of the original figure to re-submit, but undoing changes with version control is most beneficial when 
-many changes have been made to many files over a long period of time. Any change can be undone with proper version control. 
+It appears that Reviewer 2 may be a Marquette graduate. After a conversation with conference organizers,
+you decide to ignore that reviewer's comments and submit the original figure. In this particular example you would likely 
+still have a copy of the original figure to just re-submit, but this tutorial will show you how to undo specifc changes with
+version control. This illustrates how you could also undo changes have been made to multiple files over a long period of time. 
+For a real-world example, consider how the code for your research is dynamic and changes over time. Version control allows 
+you to access the history of your code, which can help with debugging or adjusting parts of the analysis in the future.
 
 ## Undoing changes
 It should be noted that there are **many** ways to undo changes with Git and GitHub. The following resources can help
@@ -300,7 +302,7 @@ and [project boards](https://docs.github.com/en/github/managing-your-work-on-git
 We highly recommend checking out the [GitHub Guides](https://guides.github.com/) for more information on GitHub project 
 management features. Check out the [issues page](https://github.com/alcantarar/ASB_Tutorial/issues?q=) or 
 [pull request pages](https://github.com/alcantarar/ASB_Tutorial/pulls?q=is%3Apr+is%3Aclosed) of the repository we used 
-to make this tutorial for an example of how GitHub's features allow for remote collaboration.
+to originally make this workshop for an example of how GitHub's features allow for remote collaboration.
 
 ## Reverting multiple changes at once
 In this situation, there were 5 pull requests that needed to be undone. In the future, you may need to undo so many changes

@@ -45,7 +45,7 @@ test_M <- function() {
   draw_M(canvas)  
 }
 
-# Solution
+## Solution ----
 # draw_M <- function(canvas) {
 #   # Adds a M body to an existing ggplot2 context
 # 

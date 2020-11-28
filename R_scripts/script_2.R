@@ -45,7 +45,7 @@ test_W <- function() {
   draw_W(canvas)  
 }
 
-# Solution
+## Solution ----
 # draw_W <- function(canvas) {
 #   # Adds a W body to an existing ggplot2 context
 # 

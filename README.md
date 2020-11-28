@@ -4,9 +4,9 @@
 This README will take you through the steps required before the workshop. 
 
 There are three things that everyone needs to do BEFORE the workshop. If you have trouble with any of these steps,
-please reach out to the workshop organizers. If you've been assigned the role of Group Leader, you have an additional
+please reach out to the workshop organizers. **If you've been assigned the role of Group Leader**, you have an additional
 step to complete BEFORE the workshop: Create one GitHub repository for your group via 
-[these instructions](https://github.com/alcantarar/UWM_GitHub_Workshop/wiki/Group-Leader-Instructions).**
+[these instructions](https://github.com/alcantarar/UWM_GitHub_Workshop/wiki/Group-Leader-Instructions).
 
 ## 1. Creating a GitHub Account
 This should be fairly self explanatory. Go the the GitHub [website](https://github.com/), and create a new account.
@@ -19,7 +19,8 @@ The workshop will focus on using Git Bash with GitHub, but there are [desktop ap
 that you may be interested in using after the workshop. These desktop applications will not be used in the workshop.
 
 #### Windows
-To download Git and use the Bash application, go to [this website](https://git-scm.com/download/win) and click the link associated with your version of Windows.
+To download Git and use the Bash application, go to [this website](https://git-scm.com/download/win) and click the link associated with your version of Windows. 
+If you already have Git installed, please make sure it is up-to-date by reinstalling it.
 
 *Note: There are many configuration options available during the setup wizard. The recommended settings will suffice for 
 this workshop.*
