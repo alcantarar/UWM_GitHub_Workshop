@@ -4,9 +4,9 @@
 This README will take you through the steps required before the workshop. 
 
 There are three things that everyone needs to do BEFORE the workshop. If you have trouble with any of these steps,
-please reach out to the workshop organizers. If you've been assigned the role of Group Leader, you have an additional
+please reach out to the workshop organizers. **If you've been assigned the role of Group Leader**, you have an additional
 step to complete BEFORE the workshop: Create one GitHub repository for your group via 
-[these instructions](https://github.com/alcantarar/UWM_GitHub_Workshop/wiki/Group-Leader-Instructions).**
+[these instructions](https://github.com/alcantarar/UWM_GitHub_Workshop/wiki/Group-Leader-Instructions).
 
 ## 1. Creating a GitHub Account
 This should be fairly self explanatory. Go the the GitHub [website](https://github.com/), and create a new account.
