@@ -1,5 +1,5 @@
-# Post-Tutorial Q&A
- We received some great questions from attendees of the 2020 vASB GitHub Tutorial. We've consolidated them along
+# Post-Workshop Q&A
+ We received some great questions from attendees of the 2020 vASB GitHub Workshop. We've consolidated them along
  with their answers. At the bottom is a list of resources that can help further your Git/GitHub understanding.
 
 **Have you used the same process (Git/GitHub) for manuscripts? If so, any tips or suggestions?**
