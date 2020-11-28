@@ -24,7 +24,7 @@ def drawLB():
 	# plot data
 	ax.fill(x, y, color = 'black')
 
-# Solution
+## Solution ----
 # def drawLB():
 # 	'''Draw the lower banner'''
 # 	# read in data

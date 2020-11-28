@@ -25,7 +25,7 @@ def drawU():
 	ax.fill(x, y, color = 'black')
 	ax.plot(x, y, color = 'black', linewidth = 2)
 
-# Solution
+## Solution ----
 # def drawU():
 # 	'''Draw the U body'''
 # 	# read in data

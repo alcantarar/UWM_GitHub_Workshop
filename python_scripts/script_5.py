@@ -24,7 +24,7 @@ def drawUB():
 	ax.fill(x, y, color=(1.0, 0.8235, 0.0))
 
 
-# Solution
+## Solution ----
 # def drawUB():
 # 	'''Draw the upper banner'''
 # 	# read in data
