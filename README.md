@@ -26,11 +26,11 @@ If you already have Git installed, please make sure it is up-to-date by reinstal
 this workshop.*
 
 #### Mac
-With Mac (10.9 and above), you can install Git directly by running the command in terminal (without the `$`):
+With Mac (10.9 and above), you can check to see if Git is installed by running the command in terminal (without the `$`):
 ```
 $ git --version
 ```
-You can also install Git through the binary installer, and can be downloaded [here](https://git-scm.com/download/mac).
+You can install Git through the binary installer, which can be downloaded [here](https://git-scm.com/download/mac).
 
 #### Linux
 If you're on Fedora or another closely related distribution you should be able to run
