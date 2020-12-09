@@ -34,11 +34,13 @@ You can install Git through the binary installer, which can be downloaded [here]
 
 #### Linux
 If you're on Fedora or another closely related distribution you should be able to run
-	$ sudo dnf install git-all
-
+```
+$ sudo dnf install git-all
+```
 or if you're on Debian-based, like Ubuntu run
-	$ sudo apt install git-all
-
+```
+$ sudo apt install git-all
+```
 If these don't work, go to this [page](https://git-scm.com/download/linux) for more information.
 
 ### B. Configuration
