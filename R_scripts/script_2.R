@@ -25,7 +25,7 @@ draw_W <- function(canvas) {
   canvas +
     geom_polygon(
       data=W,
-      fill='black',
+      fill=rgb(0, 0.2, 0.4), #per reviewer comment
       color='black',
       size=1,
       aes(x=x, y=y))
