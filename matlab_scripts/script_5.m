@@ -26,4 +26,4 @@ ylim([-3,22])
 % ylim([-3,22])
 % 
 % %plot text
-% text(2.5,1.5, 'Marquette rocks!', 'FontSize', 10)  % per reviewer comment
+text(2.5,1.5, 'Marquette rocks!', 'FontSize', 10)  % per reviewer comment
